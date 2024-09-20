@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        "custom-black":"#1f1f1f"
+        "custom-black":"#1f1f1f",
+        "golden":"#FFC100"
       }
     },
   },
