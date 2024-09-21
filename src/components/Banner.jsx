@@ -9,8 +9,8 @@ export const Banner = () => {
     <>
       <div className="w-screen bg-slate-100 md:h-screen ">
         {/* Banner body divided into 2 parts */}
-        <div className="md:flex w-screen md:flex-grow md:w-full md:h-[80%]  ">
-          <div className="md:w-1/2  flex-col md:justify-center flex text-custom-black md:px-7 md:gap-4">
+        <div className="md:flex w-screen md:flex-grow md:w-full md:h-[80%] ">
+          <div className=" md:w-1/2  flex-col md:justify-center flex text-custom-black md:px-7 md:gap-4 ">
           <ReactTyped className="text-4xl font-bold from-neutral-500 text-golden " strings={["ELEVATE YOUR WORKOUT"]} typeSpeed={60} loop backSpeed={50} />
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium recusandae dolor laborum autem minima labore molestiae explicabo blanditiis qui, odit ratione dolores quia omnis, aut facilis impedit. Praesentium, architecto.</p>
             <button className="bg-custom-black px-3 py-2 rounded-md text-white w-28"> Get Started</button>
@@ -25,7 +25,7 @@ export const Banner = () => {
           </div>
 
           {/* Right side image div */}
-          <div className="relative md:w-1/2 flex justify-end items-end">
+          <div className=" relative md:w-1/2 flex justify-end items-end">
             <div className="bg-custom-black w-64 h-full absolute right-0 top-0"></div>
             <img
               src={model}
