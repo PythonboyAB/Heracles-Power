@@ -3,10 +3,10 @@ import trainer1 from "../assets/trainer1.jpg";
 import trainer2 from "../assets/trainer2.jpg";
 import trainer3 from "../assets/trainer3.jpg";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // Import Swiper styles
+import 'swiper/swiper-bundle.css';
 
 // Import necessary Swiper components
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules"; // Import Autoplay
 
 export const TrainerSection = () => {
   return (
@@ -31,7 +31,6 @@ export const TrainerSection = () => {
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
                 <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
               </div>
-              
             </div>
             <div className="rounded-2xl group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
@@ -43,7 +42,6 @@ export const TrainerSection = () => {
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
                 <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
               </div>
-              
             </div>
             <div className="rounded-2xl group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-72">
@@ -55,7 +53,6 @@ export const TrainerSection = () => {
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
                 <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
               </div>
-              
             </div>
           </div>
         </div>
@@ -65,7 +62,11 @@ export const TrainerSection = () => {
           spaceBetween={30}
           navigation
           pagination={{ clickable: true }}
-          modules={[Navigation, Pagination]} // Add modules here
+          modules={[Navigation, Pagination, Autoplay]} // Add Autoplay module here
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: true,
+          }}
           className="mySwiper md:hidden m-4"
         >
           <SwiperSlide>
