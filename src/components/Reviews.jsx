@@ -35,7 +35,7 @@ export const Reviews = () => {
       Name: "Mansi",
       Ratings: "******",
       Feedback: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni.",
-      img: "https://randomuser.me/api/portraits/women/4.jpg"
+      img: "https://photoswalay.com/wp-content/uploads/2024/05/real-girl-photo-25.jpg"
     },
     {
       Name: "Sahil",

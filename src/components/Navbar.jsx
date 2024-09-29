@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [toggle, setToggle] = useState(true);
   const [sticky, setSticky]=useState(false)
+  const location = useLocation(); // Detect current route
+
+  const authPaths = ["/login", "/signup"];
+
+  // Check if the current route is either login or signup screen
+  const isAuthScreen = authPaths.includes(location.pathname);
   
   useEffect(()=>{
     const handleScroll=()=>{
@@ -19,7 +26,8 @@ export const Navbar = () => {
   },[])
   return (
     <>
-      <div className={`navbar  top-0 z-40 w-screen shadow fixed ${sticky?"shadow-md bg-base-300 duration-300 transition-all ease-in-out":""}`}>
+      <div className={`navbar h-12 top-0 z-40 w-screen shadow fixed ${sticky?"shadow-md bg-base-300 duration-300 transition-all ease-in-out":""} 
+                          ${isAuthScreen?"bg-white bg-opacity-20":""} `}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,55 +46,57 @@ export const Navbar = () => {
                 />
               </svg>
             </div>
+            {/* small device navbar  */}
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow `}
             >
               <li>
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a>BMI</a>
+                <Link to="/bmi">BMI</Link>
               </li>
               <li>
-                <a>Diet chart</a>
+                <Link>Diet chart</Link>
               </li>
               <li>
-                <a>Workout</a>
+                <Link>Workout</Link>
               </li>
               <li>
-                <a>About Us</a>
+                <Link>About Us</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl" href="/">
+          <Link className={`btn btn-ghost text-xl ${isAuthScreen?"text-white":""}`} to="/">
             Fitness
-          </a>
+          </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
+          {/* desktop view navbar  */}
+        <div className={`navbar-center hidden lg:flex ${isAuthScreen?"text-white":""}`}>
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a>BMI</a>
+              <Link>BMI</Link>
             </li>
             <li>
-              <a>Diet chart</a>
+              <Link>Diet chart</Link>
             </li>
             <li>
-              <a>Workout</a>
+              <Link>Workout</Link>
             </li>
             <li>
-              <a>About Us</a>
+              <Link>About Us</Link>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn bg-black text-white">Join Now</a>
+        <div className={`navbar-end ${isAuthScreen?"hidden":""}`}>
+          <Link to='/login' className="btn bg-black text-white">Join Now</Link>
         </div>
         {toggle ? (
-          <div className="dropdown dropdown-end">
+          <div className={`dropdown dropdown-end ${isAuthScreen?"hidden":""} `}>
             <div
               tabIndex={0}
               role="button"

@@ -44,7 +44,7 @@ export default function TestimonialCard({ testimonials }) {
                 <img
                   src={testimonial.img}
                   alt="Trainer 1"
-                  className="w-12 h-w-12 rounded-full border-2 border-custom-black"
+                  className="w-12 h-12 object-cover rounded-full border-2 border-custom-black"
                 />
                 <div>
                   <h1>{testimonial.Name}</h1>
