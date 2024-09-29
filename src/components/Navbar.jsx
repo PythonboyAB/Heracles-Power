@@ -79,7 +79,7 @@ export const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link>BMI</Link>
+              <Link to='/bmi'>BMI</Link>
             </li>
             <li>
               <Link>Diet chart</Link>
