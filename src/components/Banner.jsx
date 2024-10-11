@@ -7,7 +7,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 export const Banner = () => {
   return (
     <>
-      <div className="w-screen bg-slate-100 md:h-screen ">
+      <div className="w-screen bg-slate-100 md:h-screen  ">
         {/* Banner body divided into 2 parts */}
         <div className="md:h-[80%] md:flex md:flex-row-reverse flex-col-reverse h-screen ">
           {/* Right side image div */}
@@ -59,7 +59,7 @@ export const Banner = () => {
         </div>
 
         {/* Bottom black strip */}
-        <div className=" bg-custom-black w-full md:h-28 md:flex md:items-center text-white md:justify-evenly">
+        <div className=" bg-custom-black w-full md:h-[20%] md:flex md:items-center text-white md:justify-evenly">
           {[
             {
               count: "500+",

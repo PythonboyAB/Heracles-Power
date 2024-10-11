@@ -6,7 +6,7 @@ export const Navbar = () => {
   const [sticky, setSticky]=useState(false)
   const location = useLocation(); // Detect current route
 
-  const authPaths = ["/login", "/signup"];
+  const authPaths = ["/login", "/signup", "/bmi"];
 
   // Check if the current route is either login or signup screen
   const isAuthScreen = authPaths.includes(location.pathname);
